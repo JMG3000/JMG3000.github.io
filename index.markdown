@@ -14,7 +14,7 @@ title: Home
 I’m an aspiring software developer eager to begin my professional career in the tech industry. I’m looking for an entry-level role where I can apply my programming knowledge, collaborate with experienced developers, and grow into a strong contributor on a development team.
 
 - 📧 **Email:**
-[jakeincbusinesssolutions@gmail.com] (mailto:jakeincbusinesssolutions@gmail.com)
+[jakeincbusinesssolutions@gmail.com] 
 
 - 💼 **LinkedIn:** 
 <https://github.com/JMG3000/JMG3000.github.io.git>

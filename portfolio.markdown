@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: pdefault
 title: About
 permalink: /about/
 ---
