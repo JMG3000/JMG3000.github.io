@@ -56,7 +56,7 @@
 # 11/16/2025:
 - Learned more about the Ruby programming language, and setup the Git GUI and used it to commit 
 - Added gem and ruby references in my "gemfile" file, added .DS_Store to the ".gitignore" file
-- Added resume.pdf to project 
+- Added resume.pdf to project, 
 #
 # 11/??/2025:
 -?
