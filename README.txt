@@ -50,8 +50,11 @@
 - Designed, developed, and populated this README.txt file
 - Created two folders: one named "Personal Website" with another name "personal_website_starter"
 - Installed Ruby+Devkit 3.4.7, Verified Install for Ruby 3.4.7 and for Gem 3.6.9.
-- 
-#
+- Created a new repo named "personal_website_starter"
+- Committed the "personal_website_starter" files to the new GitHub repo
+- Updated the index.md file with contact information
+-
+-
 # 11/??/2025:
 -?
 -?
