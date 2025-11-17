@@ -53,12 +53,10 @@
 - Created a new repo named "personal_website_starter"
 - Committed the "personal_website_starter" files to the new GitHub repo
 - Updated the index.md file with contact information
--
--
-# 11/??/2025:
--?
--?
--?
+# 11/16/2025:
+- Learned more about the Ruby programming language, and setup the Git GUI and used it to commit 
+- Added gem and ruby references in my "gemfile" file, added .DS_Store to the ".gitignore" file
+- Added resume.pdf to project 
 #
 # 11/??/2025:
 -?

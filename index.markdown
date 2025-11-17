@@ -16,13 +16,13 @@ I’m an aspiring software developer eager to begin my professional career in th
 <jakeincbusinesssolutions@gmail.com>
 
 - 💼 **LinkedIn:** 
-<https://github.com/JMG3000/JMG3000.github.io.git>
+<https://www.linkedin.com/in/jacobgarrett/>
 
 - 🧑‍💻 **GitHub:**
 <https://github.com/JMG3000>
 
 
-#> Download my resume (PDF):
-#[resume.pdf] (resume.pdf)
+> Download my resume (PDF):
+[resume.pdf] (resume.pdf)
 
 ![Jake's headshot] (assets/img/profile.jpg)
