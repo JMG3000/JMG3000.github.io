@@ -21,7 +21,7 @@ I’m an aspiring software developer eager to begin my professional career in th
 - 🧑‍💻 **GitHub:**
 <https://github.com/JMG3000>
 
-> Download my resume (PDF):
+- Download my resume (PDF):
 <https://github.com/JMG3000/resume.pdf>
 
 ![Jake's headshot] (assets/img/profile.jpg)
