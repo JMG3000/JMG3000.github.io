@@ -8,7 +8,7 @@ layout: default
 title: Home
 ---
 
-# Hello, my name is Jacob Garrett
+# Hello, my name is Jacob Garrett.
 
 I’m an aspiring software developer eager to begin my professional career in the tech industry. I’m looking for an entry-level role where I can apply my programming knowledge, collaborate with experienced developers, and grow into a strong contributor on a development team.
 
@@ -21,8 +21,7 @@ I’m an aspiring software developer eager to begin my professional career in th
 - 🧑‍💻 **GitHub:**
 <https://github.com/JMG3000>
 
-
-> Download my resume (PDF):
-[resume.pdf] <resume.pdf>
+- Download my resume (PDF):
+<https://github.com/JMG3000/resume.pdf>
 
 ![Jake's headshot] (assets/img/profile.jpg)
