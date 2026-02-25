@@ -58,12 +58,36 @@
 - Added gem and ruby references in my "gemfile" file, added .DS_Store to the ".gitignore" file
 - Added resume.pdf to project, 
 #
-# 11/??/2025:
--?
--?
+# 12/28/2025:
+- Commited the profile.jpg file to the GitHub
+- Started the full site build process to Next.JS/React/Chakra-ui
 -?
 #
-# 11/??/2025:
+# 12/31/2025:
+- Site migration from Ruby/Jekyll/Tailwind finished successfully
+- New File Structure
+├── package.json
+├── next.config.js
+├── tsconfig.json
+├── src/
+│   ├── pages/
+│   │   ├── _app.tsx          (Chakra Provider)
+│   │   ├── _document.tsx      (optional, for head/style setup)
+│   │   ├── index.tsx          (home, replaces index.markdown)
+│   │   ├── portfolio.tsx      (replaces portfolio.markdown)
+│   │   └── 404.tsx
+│   ├── components/
+│   │   ├── Layout.tsx
+│   │   └── PostCard.tsx       (example: reusable Chakra component)
+├── public/
+│   └── images/                (from assets/img/)
+├── content/
+│   └── posts/                 (from _posts/)
+└── .gitignore, README.md, etc.
+
+-?
+#
+# ??/??/2025:
 -?
 -?
 -?
