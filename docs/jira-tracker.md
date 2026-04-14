@@ -40,3 +40,4 @@ Sync target: https://github.com/users/JMG3000/projects/2
 - This file is the roadmap source for logging all GitHub issue status values.
 - Keep `Project Status (My Portfolio)` aligned manually with the private project board column/status.
 - Update status metrics whenever issue states change.
+- Issues #5 and #6 intentionally share the same historical title in GitHub.
