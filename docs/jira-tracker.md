@@ -32,7 +32,7 @@ Sync target: https://github.com/users/JMG3000/projects/2
 | #5 | Automate logging of issue create on roadmap | CLOSED | Done | N/A | N/A | N/A |
 | #4 | Use this sub-issue inside another sub-issue to test functionality | CLOSED | Done | N/A | N/A | N/A |
 | #3 | Populate the project board with the desired metrics and information | OPEN | Backlog | N/A | N/A | N/A |
-| #2 | Get the road map to log all issue status | OPEN | In Progress | N/A | N/A | N/A |
+| #2 | Get the roadmap to log all issue status | OPEN | In Progress | N/A | N/A | N/A |
 | #1 | implement a roadmap and project board | OPEN | Backlog | N/A | N/A | N/A |
 
 ## Sync Notes
