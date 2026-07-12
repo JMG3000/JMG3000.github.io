@@ -60,8 +60,8 @@ export default function Portfolio() {
           </VStack>
         </Box>
 
-        <Button as={NextLink} href="/" variant="outline">
-          Back to Home
+        <Button asChild variant="outline">
+          <NextLink href="/">Back to Home</NextLink>
         </Button>
       </VStack>
     </>
