@@ -28,17 +28,15 @@ export default function Home() {
             Software developer passionate about building clean, useful products.
             Welcome to my personal site.
           </Text>
-          <Stack direction="row" gap={4} mt={6}>
-            <NextLink href="/portfolio">
-              <Button colorPalette="blue" size="lg">
-                View Portfolio
-              </Button>
-            </NextLink>
-            <NextLink href="mailto:jakeincbusinesssolutions@gmail.com">
-              <Button variant="outline" size="lg">
+          <Stack direction="row" gap={4} mt={6} wrap="wrap">
+            <Button asChild colorPalette="blue" size="lg">
+              <NextLink href="/portfolio">View Portfolio</NextLink>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a href="mailto:jakeincbusinesssolutions@gmail.com">
                 Contact Me
-              </Button>
-            </NextLink>
+              </a>
+            </Button>
           </Stack>
         </Box>
 
@@ -59,16 +57,25 @@ export default function Home() {
           <Heading as="h2" size="xl" mb={3}>
             Connect
           </Heading>
-          <Stack direction="row" gap={4}>
-            <NextLink href="https://github.com/JMG3000" target="_blank">
-              <Button variant="outline">GitHub</Button>
-            </NextLink>
-            <NextLink
-              href="https://www.linkedin.com/in/jacobgarrett/"
-              target="_blank"
-            >
-              <Button variant="outline">LinkedIn</Button>
-            </NextLink>
+          <Stack direction="row" gap={4} wrap="wrap">
+            <Button asChild variant="outline">
+              <a
+                href="https://github.com/JMG3000"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </Button>
+            <Button asChild variant="outline">
+              <a
+                href="https://www.linkedin.com/in/jacobgarrett/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </Button>
           </Stack>
         </Box>
       </VStack>
