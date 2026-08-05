@@ -25,7 +25,7 @@ export default function Home() {
             Hi, I&apos;m Jacob Garrett
           </Heading>
           <Text fontSize="xl" color="gray.600" maxW="600px">
-            Software developer passionate about building clean, useful products.
+            Software developer passionate about building clean, sustainable, useful products.
             Welcome to my personal site.
           </Text>
           <Stack direction="row" gap={4} mt={6}>
