@@ -24,7 +24,7 @@ jobs:
           npm pkg delete overrides.next.sharp
           npm install --save-exact next@16.4.6 js-yaml@5.5.0
           npm install --save-dev --save-exact eslint-config-next@16.4.6
-          npm audit fix
+          npm audit fix --audit-level=high
       - name: Reinstall and validate
         run: |
           npm ci
