@@ -130,7 +130,7 @@ function resolveResearchLink(href: string, sourcePath: string) {
   }
 }
 
-function renderInline(value: string) {
+function renderInline(value: string, sourcePath: string) {
   let output = escapeHtml(value);
   const codeTokens: string[] = [];
 
@@ -203,7 +203,7 @@ export function renderResearchMarkdown(markdown: string, sourcePath = "README.md
       const level = heading[1].length;
       const title = heading[2].replace(/\s+#+\s*$/, "");
       const id = title.toLowerCase().replace(/[^a-z0-9\s-]/g, "").trim().replace(/\s+/g, "-");
-      html.push(`<h${level} id="${id}">${renderInline(title)}</h${level}>`);
+      html.push(`<h${level} id="${id}">${renderInline(title, sourcePath)}</h${level}>`);
       index += 1;
       continue;
     }
@@ -223,7 +223,7 @@ export function renderResearchMarkdown(markdown: string, sourcePath = "README.md
         index += 1;
       }
       html.push(
-        `<div class="research-table-wrap"><table><thead><tr>${headers.map((cell) => `<th scope="col">${renderInline(cell)}</th>`).join("")}</tr></thead><tbody>${rows.map((row) => `<tr>${headers.map((_header, cellIndex) => `<td>${renderInline(row[cellIndex] ?? "")}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`,
+        `<div class="research-table-wrap"><table><thead><tr>${headers.map((cell) => `<th scope="col">${renderInline(cell, sourcePath)}</th>`).join("")}</tr></thead><tbody>${rows.map((row) => `<tr>${headers.map((_header, cellIndex) => `<td>${renderInline(row[cellIndex] ?? "", sourcePath)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`,
       );
       continue;
     }
@@ -236,7 +236,7 @@ export function renderResearchMarkdown(markdown: string, sourcePath = "README.md
       while (index < lines.length) {
         const match = lines[index].match(/^\s*(?:- |\* |\+ |\d+\. )(.*)$/);
         if (!match) break;
-        items.push(`<li>${renderInline(match[1])}</li>`);
+        items.push(`<li>${renderInline(match[1], sourcePath)}</li>`);
         index += 1;
       }
       html.push(`<${tag}>${items.join("")}</${tag}>`);
@@ -259,7 +259,7 @@ export function renderResearchMarkdown(markdown: string, sourcePath = "README.md
       paragraph.push(lines[index]);
       index += 1;
     }
-    html.push(`<p>${paragraph.map((part) => renderInline(part)).join(" ")}</p>`);
+    html.push(`<p>${paragraph.map((part) => renderInline(part, sourcePath)).join(" ")}</p>`);
   }
 
   return html.join("\n");
