@@ -106,13 +106,16 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#39;");
 }
 
-function resolveResearchLink(href: string) {
+function resolveResearchLink(href: string, sourcePath: string) {
   const trimmed = href.trim();
   const internalMarkdown = trimmed.match(/^([a-zA-Z0-9_./-]+\.md)(?:#[a-zA-Z0-9_-]+)?$/);
   if (internalMarkdown) {
-    const normalized = path.posix.normalize(internalMarkdown[1]);
+    const normalized = path.posix.normalize(
+      path.posix.join(path.posix.dirname(sourcePath), internalMarkdown[1]),
+    );
+    if (normalized.startsWith("../") || normalized === "..") return null;
     const slug = allSources.get(normalized);
-    return slug ? (slug === "index" ? "/research/" : `/research/${slug}/`) : null;
+    return slug ? (slug === "index" ? "/research" : `/research/${slug}`) : null;
   }
 
   if (trimmed.startsWith("#")) {
@@ -138,7 +141,7 @@ function renderInline(value: string) {
   });
 
   output = output.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label: string, href: string) => {
-    const safeHref = resolveResearchLink(href);
+    const safeHref = resolveResearchLink(href, sourcePath);
     if (!safeHref) return label;
     const external = /^https?:\/\//i.test(safeHref);
     const target = external ? ' target="_blank" rel="noopener noreferrer"' : "";
@@ -171,7 +174,7 @@ function isBlockStart(lines: string[], index: number) {
   );
 }
 
-export function renderResearchMarkdown(markdown: string) {
+export function renderResearchMarkdown(markdown: string, sourcePath = "README.md") {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const html: string[] = [];
   let index = 0;
