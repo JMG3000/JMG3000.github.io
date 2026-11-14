@@ -28,6 +28,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link asChild _hover={{ textDecoration: "underline" }}>
                 <NextLink href="/portfolio">Portfolio</NextLink>
               </Link>
+              <Link asChild _hover={{ textDecoration: "underline" }}>
+                <NextLink href="/research/">Research</NextLink>
+              </Link>
             </Stack>
           </Flex>
         </Container>
