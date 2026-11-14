@@ -31,7 +31,7 @@ This directory contains the consolidated research and repository-specific govern
 
 The intended content integration is for the portfolio's GitHub Pages build to read from this repository-local package path. The path is therefore part of the documented source contract and should remain stable.
 
-The Next.js Research section reads the Markdown files directly from this repository-local directory during `next build`. The static routes are implemented in [PR #27](https://github.com/JMG3000/JMG3000.github.io/pull/27). The build uses a fixed allowlist of the six reviewed Markdown files; it does not recursively publish arbitrary files. This directory remains the sole content source; no copy is made into `content/posts/` or another content tree.
+The Next.js Research section reads the Markdown files directly from this repository-local directory during `next build`. The static routes are implemented in [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28). The build uses a fixed allowlist of the six reviewed Markdown files; it does not recursively publish arbitrary files. This directory remains the sole content source; no copy is made into `content/posts/` or another content tree.
 
 ## Scope and boundaries
 
