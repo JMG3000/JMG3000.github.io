@@ -27,7 +27,7 @@ export default function ResearchDocumentPage({ title, description, html }: Resea
           <Breadcrumb.List>
             <Breadcrumb.Item>
               <Breadcrumb.Link asChild>
-                <NextLink href="/research/">Research</NextLink>
+                <NextLink href="/research">Research</NextLink>
               </Breadcrumb.Link>
             </Breadcrumb.Item>
             <Breadcrumb.Separator />
@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps<ResearchDocumentProps> = async ({ pa
       props: {
         title: document.title,
         description: document.description,
-        html: renderResearchMarkdown(document.content),
+        html: renderResearchMarkdown(document.content, document.source),
       },
     };
   } catch {
