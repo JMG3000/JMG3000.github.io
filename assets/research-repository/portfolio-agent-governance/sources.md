@@ -74,3 +74,7 @@
 15. **Static Research Pages implementation — PR #28**  
     https://github.com/JMG3000/JMG3000.github.io/pull/28  
     Implements the allowlisted build-time Markdown source integration and static Research routes; validation is recorded separately from the PR's review/merge state.
+
+16. **GitHub Actions validation run #43597641137**  
+    https://github.com/JMG3000/JMG3000.github.io/actions/runs/43597641137  
+    Successful Node 24 validation for commit `81d13636fbed6ce75fbb908042991cb52dcda187`: install, lint, typecheck, 20 tests, static build, six-page post-build allowlist verification, and high-severity audit threshold. Seven moderate dependency advisories remain; Pages deployment was skipped for the PR.
