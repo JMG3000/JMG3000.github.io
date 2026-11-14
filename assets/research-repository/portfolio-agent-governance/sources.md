@@ -70,3 +70,7 @@
 14. **GitHub CODEOWNERS documentation**  
     https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners  
     Documents the conditions for code-owner review, including write access and the need for a distinct reviewer from the PR author.
+
+15. **Static Research Pages implementation — PR #28**  
+    https://github.com/JMG3000/JMG3000.github.io/pull/28  
+    Implements the allowlisted build-time Markdown source integration and static Research routes; validation is recorded separately from the PR's review/merge state.
