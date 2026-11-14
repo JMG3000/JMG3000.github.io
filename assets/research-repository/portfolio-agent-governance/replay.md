@@ -61,7 +61,22 @@ Implementation is tracked in [Issue #27](https://github.com/JMG3000/JMG3000.gith
 - Unknown slugs and traversal-shaped slugs are rejected.
 - No Markdown files are copied to `content/posts/` or another content directory.
 
-**Validation status:** Pending the PR #28 GitHub Actions run and inspection of the generated `out/` directory. Do not mark publication complete until all six source files are represented by the expected static pages and no unapproved source files appear.
+**Validation evidence:** GitHub Actions run [#43597641137](https://github.com/JMG3000/JMG3000.github.io/actions/runs/43597641137) completed successfully for commit `81d13636fbed6ce75fbb908042991cb52dcda187`.
+
+| Check | Result |
+| --- | --- |
+| `npm ci` | PASS |
+| `npm run lint` | PASS |
+| `npm run typecheck` | PASS |
+| `npm test` | PASS — 20 tests across 6 files |
+| `npm run build` | PASS — Next.js static export |
+| Post-build output verification | PASS — 6 allowlisted Research HTML pages found in `out/` |
+| `npm audit --audit-level=high` | PASS — 7 moderate advisories remain; no high-severity finding blocked this gate |
+| Pages deployment | SKIPPED as expected for a pull request |
+
+The build log confirms the Research index and five static detail routes were generated. The post-build verifier checks all six expected HTML outputs and rejects unexpected HTML pages under the Research output directory. The workflow did not upload a Pages artifact or deploy the site because this is a pull request.
+
+**Disposition:** Static generation and the post-build allowlist check are verified. The PR remains open for owner review; no production publication has occurred.
 
 ## 6. Replay conclusion
 
