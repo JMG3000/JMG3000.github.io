@@ -64,7 +64,7 @@ npm run build
 - The source directory is the single source of truth; files are not copied into `content/posts/`.
 - An explicit manifest limits public output to the six reviewed Markdown files. New files are not published automatically.
 - Raw HTML is escaped, unsafe URL schemes are rejected, and only allowlisted Markdown links are converted to internal research routes.
-- Implementation and verification are tracked in [Issue #27](https://github.com/JMG3000/JMG3000.github.io/issues/27) and [PR #27](https://github.com/JMG3000/JMG3000.github.io/pull/27).
+- Implementation and verification are tracked in [Issue #27](https://github.com/JMG3000/JMG3000.github.io/issues/27) and [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28).
 
 ## Delivery controls
 
