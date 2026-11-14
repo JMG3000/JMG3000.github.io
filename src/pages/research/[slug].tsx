@@ -1,4 +1,4 @@
-import { Box, Breadcrumb, Heading, Link, Stack } from "@chakra-ui/react";
+import { Box, Breadcrumb, Link, Stack } from "@chakra-ui/react";
 import Head from "next/head";
 import NextLink from "next/link";
 import type { GetStaticPaths, GetStaticProps } from "next";
