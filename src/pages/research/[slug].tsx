@@ -38,7 +38,7 @@ export default function ResearchDocumentPage({ title, description, html }: Resea
         </Breadcrumb.Root>
         <Box className="research-content" dangerouslySetInnerHTML={{ __html: html }} />
         <Link asChild color="blue.600" fontWeight="semibold" alignSelf="flex-start">
-          <NextLink href="/research/">Back to research index</NextLink>
+          <NextLink href="/research">Back to research index</NextLink>
         </Link>
       </Stack>
     </>
