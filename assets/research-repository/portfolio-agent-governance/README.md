@@ -5,7 +5,7 @@
 **Canonical location:** `assets/research-repository/portfolio-agent-governance/`  
 **Baseline reviewed:** `dev` at `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`  
 **Review date:** 2026-11-14  
-**Status:** Research consolidated; no operational controls changed.
+**Status:** Research consolidated; static Pages integration in PR #27; no production release.
 
 ## Purpose and ownership
 
@@ -35,7 +35,7 @@ All research for this work is consolidated in this package. It remains in `JMG30
 - Pull requests target `dev`; `main` remains the production/Pages release branch.
 - Existing GitHub Actions validation is reused.
 - GitHub Pages deployment remains limited to pushes to `main`.
-- The Pages content integration is intended to read this package from its canonical repository path. This research PR records the source-location requirement; it does not implement the application/build integration.
+- The Next.js Research section reads this package from its canonical repository path at build time through an explicit six-file allowlist. PR #27 implements the static routes; validation and owner review remain recorded in that PR.
 - Owner authorization remains separate from tool access and CI success.
 
 ## Important live finding
@@ -46,7 +46,7 @@ The portfolio repository currently has active ruleset #27215483 targeting `dev` 
 
 - Implementing `AGENTS.md` or `.github/AGENTS.md`.
 - Editing the root application README or CI workflow.
-- Wiring the Next.js/static build to publish this Markdown package.
+- Expanding the published allowlist or changing the public content set without owner review.
 - Changing branch protection or required checks.
 - Removing CircleCI or changing GitHub Apps/integrations.
 - Adding a new workflow, agent runtime, framework, permanent branch, board, Jira project, telemetry, or background service.
