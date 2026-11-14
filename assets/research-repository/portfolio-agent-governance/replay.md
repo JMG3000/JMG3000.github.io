@@ -4,7 +4,7 @@
 **Target:** `JMG3000/JMG3000.github.io`  
 **Baseline:** `dev` commit `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`
 
-This replay records the repository baseline and the implementation handoff for the static Research section. The implementation is isolated in PR #27; no production deployment or ruleset change is included.
+This replay records the repository baseline and the implementation handoff for the static Research section. The implementation is isolated in PR #28; no production deployment or ruleset change is included.
 
 ## 1. Repository baseline
 
@@ -50,7 +50,7 @@ The same PR also reported a failing `CircleCI Pipeline` status: “No configurat
 
 ## 5. Static Pages source integration
 
-Implementation is tracked in [Issue #27](https://github.com/JMG3000/JMG3000.github.io/issues/27) and [PR #27](https://github.com/JMG3000/JMG3000.github.io/pull/27).
+Implementation is tracked in [Issue #27](https://github.com/JMG3000/JMG3000.github.io/issues/27) and [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28).
 
 - Canonical source: `assets/research-repository/` in this repository.
 - The root `README.md` is rendered as the Research index at `/research`.
@@ -61,7 +61,7 @@ Implementation is tracked in [Issue #27](https://github.com/JMG3000/JMG3000.gith
 - Unknown slugs and traversal-shaped slugs are rejected.
 - No Markdown files are copied to `content/posts/` or another content directory.
 
-**Validation status:** Pending the PR #27 GitHub Actions run and inspection of the generated `out/` directory. Do not mark publication complete until all six source files are represented by the expected static pages and no unapproved source files appear.
+**Validation status:** Pending the PR #28 GitHub Actions run and inspection of the generated `out/` directory. Do not mark publication complete until all six source files are represented by the expected static pages and no unapproved source files appear.
 
 ## 6. Replay conclusion
 
