@@ -1,14 +1,25 @@
-# Portfolio Agent Governance — Research Package
+# Portfolio Agent Governance — Consolidated Research Package
 
-**Classification:** Research / proposal  
+**Classification:** Consolidated research / implementation proposal  
 **Target:** `JMG3000/JMG3000.github.io`  
-**Current baseline:** `dev` at `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`  
+**Canonical location:** `assets/research-repository/portfolio-agent-governance/`  
+**Baseline reviewed:** `dev` at `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`  
 **Review date:** 2026-11-14  
-**Status:** Draft for owner review; no operational controls changed.
+**Status:** Research consolidated; no operational controls changed.
 
-## Purpose
+## Purpose and ownership
 
-Adapt the useful parts of the TwinAnchor governance reference into a small, repository-specific operating framework for the GitHub Pages portfolio. The objective is controlled, low-friction engineering—not a new agent platform or generalized governance system.
+This package adapts the useful parts of the TwinAnchor governance reference into a small, repository-specific operating framework for the GitHub Pages portfolio. The objective is controlled, low-friction engineering—not a new agent platform or generalized governance system.
+
+All research for this work is consolidated in this package. It remains in `JMG3000/JMG3000.github.io` as the portfolio's repository-local source. It is not a temporary staging copy and is not scheduled for transfer to `JMG3000/research-repository`.
+
+## Retention and lifecycle
+
+- Keep this package at its current repository path so the portfolio's GitHub Pages content pipeline can consume it as the designated source.
+- Do not move, copy elsewhere as a replacement, rename, archive, or delete the package without explicit owner approval.
+- Parking or completing the related project does not automatically change the package's ownership or location.
+- If the project is parked, update the status and record the date/context while preserving the source material, provenance, and Git history.
+- Any future change to this retention or ownership decision requires explicit owner approval.
 
 ## Documents
 
@@ -24,6 +35,7 @@ Adapt the useful parts of the TwinAnchor governance reference into a small, repo
 - Pull requests target `dev`; `main` remains the production/Pages release branch.
 - Existing GitHub Actions validation is reused.
 - GitHub Pages deployment remains limited to pushes to `main`.
+- The Pages content integration is intended to read this package from its canonical repository path. This research PR records the source-location requirement; it does not implement the application/build integration.
 - Owner authorization remains separate from tool access and CI success.
 
 ## Important live finding
@@ -33,12 +45,13 @@ The portfolio repository currently has active ruleset #27215483 targeting `dev` 
 ## Not in scope
 
 - Implementing `AGENTS.md` or `.github/AGENTS.md`.
-- Editing the root README or CI workflow.
+- Editing the root application README or CI workflow.
+- Wiring the Next.js/static build to publish this Markdown package.
 - Changing branch protection or required checks.
 - Removing CircleCI or changing GitHub Apps/integrations.
 - Adding a new workflow, agent runtime, framework, permanent branch, board, Jira project, telemetry, or background service.
 - Merging to `dev` or releasing to `main`.
 
-## Transfer
+## Ownership decision
 
-After owner review, transfer this directory to the existing [JMG3000/research-repository](https://github.com/JMG3000/research-repository) using that repository's current intake instructions. Do not create a second canonical policy identity or reuse the PactLattice `PLT-GOV-*` namespace for this portfolio-specific framework.
+The canonical source remains this repository path. The prior idea of transferring the package to `JMG3000/research-repository` is superseded. Do not initiate that transfer unless the owner explicitly authorizes a change.
