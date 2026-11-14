@@ -5,7 +5,7 @@
 **Canonical location:** `assets/research-repository/portfolio-agent-governance/`  
 **Baseline reviewed:** `dev` at `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`  
 **Review date:** 2026-11-14  
-**Status:** Research consolidated; static Pages integration in PR #28; no production release.
+**Status:** Research consolidated; static Pages integration validated in PR #28; owner review pending; no production release.
 
 ## Purpose and ownership
 
