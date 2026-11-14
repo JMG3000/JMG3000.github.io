@@ -87,7 +87,7 @@ describe("safe research Markdown rendering", () => {
       "[Framework](framework.md) [Index](README.md) [Unknown](secret.md)",
       "portfolio-agent-governance/README.md",
     );
-    expect(html).toContain('href="/research/framework/"');
+    expect(html).toContain('href="/research/framework"');
     expect(html).toContain('href="/research/portfolio-agent-governance"');
     expect(html).not.toContain("secret.md");
   });
