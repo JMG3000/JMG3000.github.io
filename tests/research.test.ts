@@ -85,6 +85,7 @@ describe("safe research Markdown rendering", () => {
   it("maps relative allowlisted Markdown links to static research routes", () => {
     const html = renderResearchMarkdown(
       "[Framework](framework.md) [Index](README.md) [Unknown](secret.md)",
+      "portfolio-agent-governance/README.md",
     );
     expect(html).toContain('href="/research/framework/"');
     expect(html).toContain('href="/research/"');
