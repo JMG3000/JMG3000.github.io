@@ -5,7 +5,7 @@
 **Canonical location:** `assets/research-repository/portfolio-agent-governance/`  
 **Baseline reviewed:** `dev` at `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`  
 **Review date:** 2026-11-14  
-**Status:** Research consolidated; static Pages integration in PR #27; no production release.
+**Status:** Research consolidated; static Pages integration in PR #28; no production release.
 
 ## Purpose and ownership
 
@@ -35,7 +35,7 @@ All research for this work is consolidated in this package. It remains in `JMG30
 - Pull requests target `dev`; `main` remains the production/Pages release branch.
 - Existing GitHub Actions validation is reused.
 - GitHub Pages deployment remains limited to pushes to `main`.
-- The Next.js Research section reads this package from its canonical repository path at build time through an explicit six-file allowlist. PR #27 implements the static routes; validation and owner review remain recorded in that PR.
+- The Next.js Research section reads this package from its canonical repository path at build time through an explicit six-file allowlist. PR #28 implements the static routes; validation and owner review remain recorded in that PR.
 - Owner authorization remains separate from tool access and CI success.
 
 ## Important live finding
