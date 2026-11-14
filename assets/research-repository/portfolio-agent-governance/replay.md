@@ -4,7 +4,7 @@
 **Target:** `JMG3000/JMG3000.github.io`  
 **Baseline:** `dev` commit `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`
 
-This replay checks the proposed framework against the repository's observed configuration. It is not an implementation test and made no settings or application changes.
+This replay records the repository baseline and the implementation handoff for the static Research section. The implementation is isolated in PR #27; no production deployment or ruleset change is included.
 
 ## 1. Repository baseline
 
@@ -48,7 +48,22 @@ The same PR also reported a failing `CircleCI Pipeline` status: “No configurat
 - The root README describes the existing application, local checks, and delivery controls.
 - The current workflow already provides the validation and deployment structure; no additional workflow is justified by this replay.
 
-## 5. Replay conclusion
+## 5. Static Pages source integration
+
+Implementation is tracked in [Issue #27](https://github.com/JMG3000/JMG3000.github.io/issues/27) and [PR #27](https://github.com/JMG3000/JMG3000.github.io/pull/27).
+
+- Canonical source: `assets/research-repository/` in this repository.
+- The root `README.md` is rendered as the Research index at `/research`.
+- Five allowlisted documents are rendered as static detail routes under `/research/{slug}`.
+- The manifest explicitly names the five detail files; together with the root README, exactly six Markdown files are exposed.
+- `getStaticProps` and `getStaticPaths` read and generate content at build time; there is no request-time filesystem access, API route, remote fetch, CMS, or runtime Node server.
+- Markdown raw HTML is escaped; links are limited to safe external protocols, same-package allowlisted Markdown links, or local anchors.
+- Unknown slugs and traversal-shaped slugs are rejected.
+- No Markdown files are copied to `content/posts/` or another content directory.
+
+**Validation status:** Pending the PR #27 GitHub Actions run and inspection of the generated `out/` directory. Do not mark publication complete until all six source files are represented by the expected static pages and no unapproved source files appear.
+
+## 6. Replay conclusion
 
 | Area | Finding |
 | --- | --- |
