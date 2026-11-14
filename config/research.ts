@@ -246,7 +246,7 @@ export function renderResearchMarkdown(markdown: string, sourcePath = "README.md
     if (line.startsWith(">")) {
       const quote: string[] = [];
       while (index < lines.length && lines[index].startsWith(">")) {
-        quote.push(renderInline(lines[index].replace(/^>\s?/, "")));
+        quote.push(renderInline(lines[index].replace(/^>\s?/, ""), sourcePath));
         index += 1;
       }
       html.push(`<blockquote>${quote.map((item) => `<p>${item}</p>`).join("")}</blockquote>`);
