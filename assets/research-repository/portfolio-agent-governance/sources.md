@@ -50,3 +50,23 @@
 - CircleCI status failure is a GitHub commit-status observation, not proof of the current state of every CircleCI account or project setting.
 - No formal legal or regulatory compliance assessment was performed.
 - No runtime behavior, telemetry, agent execution, or private user data was collected.
+
+10. **Next.js static Pages integration — Issue #27**  
+    https://github.com/JMG3000/JMG3000.github.io/issues/27  
+    Defines the explicit six-file Markdown allowlist, static generation requirements, security boundaries, and acceptance tests.
+
+11. **Next.js static export documentation**  
+    https://nextjs.org/docs/app/guides/static-exports  
+    Confirms that Next.js static export generates route HTML during `next build` and does not provide request-time Node.js features.
+
+12. **GitHub Pages deployment documentation**  
+    https://docs.github.com/en/get-started/start-your-journey/deploying-your-website-automatically  
+    Documents GitHub Actions as the build/deploy path for GitHub Pages.
+
+13. **GitHub ruleset approval documentation**  
+    https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets  
+    Used to assess pull-request approval controls and their implications for the current single-owner workflow.
+
+14. **GitHub CODEOWNERS documentation**  
+    https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners  
+    Documents the conditions for code-owner review, including write access and the need for a distinct reviewer from the PR author.
