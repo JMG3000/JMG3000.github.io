@@ -1,29 +1,46 @@
-# Temporary Research Package Staging
+# Portfolio Research Package
 
 **Repository:** [JMG3000/JMG3000.github.io](https://github.com/JMG3000/JMG3000.github.io)  
-**Staging path:** `assets/research-repository/`  
+**Canonical repository path:** `assets/research-repository/`  
 **Package:** [Portfolio Agent Governance](portfolio-agent-governance/README.md)  
-**Status:** Draft for owner review; not an approved implementation.
+**Status:** Consolidated research; owner review and any future implementation remain separately authorized.
 
-This directory temporarily holds the research and customized governance framework for the GitHub Pages portfolio revamp. After owner review, the package is intended to be transferred to [JMG3000/research-repository](https://github.com/JMG3000/research-repository). No changes to that destination repository are part of this staging pass.
+## Purpose and source-of-truth
+
+This directory contains the consolidated research and repository-specific governance framework for the GitHub Pages portfolio. It is intentionally maintained in this repository as the portfolio's designated source location.
+
+**This is not a temporary transfer staging area.** The research is consolidated here and is not scheduled to move to `JMG3000/research-repository` or another repository. Keep this path stable so the portfolio's GitHub Pages content pipeline can consume the material from its repository-local source. Do not create a second copy elsewhere as a substitute for this source.
+
+## Retention and project lifecycle
+
+- Keep the consolidated package and its Git history in this repository.
+- Completion or parking of the related project does not automatically archive, move, or delete this package.
+- If the project is later parked, update the package status and record the date/context here; preserve the research, provenance, and history in place.
+- Do not relocate, rename, transfer, or delete this directory unless the owner explicitly approves that specific change.
+- Until such approval, this directory remains the authoritative repository-local location for this portfolio research.
 
 ## Package contents
 
-- [Portfolio Agent Governance](portfolio-agent-governance/README.md) — package overview and boundaries.
+- [Portfolio Agent Governance](portfolio-agent-governance/README.md) — package overview, ownership, and lifecycle.
 - [Customized framework](portfolio-agent-governance/framework.md) — repository-specific operating guidance.
 - [TwinAnchor critique](portfolio-agent-governance/twinanchor-review.md) — source analysis and target adaptation.
-- [Replay and validation](portfolio-agent-governance/replay.md) — read-only replay against the current portfolio repository.
+- [Replay and validation](portfolio-agent-governance/replay.md) — read-only replay against the portfolio repository.
 - [Sources and provenance](portfolio-agent-governance/sources.md) — exact source references and observed revisions.
 
-## Explicit boundaries
+## Pages consumption boundary
 
-- This package belongs to the GitHub Pages portfolio repository only.
-- Mission Command Platform is unrelated and excluded.
-- The package consists only of Markdown documentation. It adds no executable code, runtime, agent, telemetry, tracking, credential handling, background process, or network collection.
-- It does not modify the site's application, root README, CI workflow, GitHub Pages deployment, branch rulesets, Jira, or GitHub Project #2.
-- The existing root `.gitignore` does not exclude this path; these files are intended to be tracked.
-- This staging copy is not yet the canonical research-repository record.
+The intended content integration is for the portfolio's GitHub Pages build to read from this repository-local package path. The path is therefore part of the documented source contract and should remain stable.
+
+This research-package PR documents that ownership and source-location contract only. It does not itself wire the Next.js application or static build to publish these Markdown files as Pages content. Any implementation of that consumption must be handled and validated as a separately scoped application/build change, while continuing to use this directory as its source.
+
+## Scope and boundaries
+
+- This package belongs to the GitHub Pages portfolio repository.
+- The package consists of Markdown research and documentation; it adds no executable code, agent runtime, telemetry, tracking, credential handling, background process, or network collection.
+- It does not modify the site's application, root README, CI workflow, GitHub Pages deployment, branch rulesets, or external project systems.
+- The files are tracked in Git and retained as part of the repository's history.
+- Owner authorization for implementation, publication, or lifecycle changes remains separate from documentation and CI success.
 
 ## Provenance
 
-Created on a short-lived branch from `dev`. The associated portfolio planning record is [Issue #24](https://github.com/JMG3000/JMG3000.github.io/issues/24). Issue #24 remains a separate planning item; this documentation package does not implement it or close it.
+The package was assembled on a short-lived branch originating from `dev`. The related portfolio planning record is [Issue #24](https://github.com/JMG3000/JMG3000.github.io/issues/24). Issue #24 remains a separate planning item; this documentation package does not implement it or close it.
