@@ -40,7 +40,7 @@ The six Markdown documents in this PR form this portfolio-specific package. Rela
 
 ## Important live finding
 
-The portfolio repository currently has active ruleset #27215483 targeting `dev` and `main`. Its required status-check context is still the literal placeholder `REPLACE_WITH_REAL_CI_JOB`. A real GitHub Actions check named `Validate and build` was observed succeeding on PR #25. The placeholder mismatch is a configuration issue requiring owner review; this package does not change the ruleset.
+The portfolio repository has active ruleset #27215483 targeting `dev` and `main`. Its required status-check context remains the literal placeholder `REPLACE_WITH_REAL_CI_JOB`. The real GitHub Actions check is `Validate and build` (GitHub Actions integration ID `15368`) and was observed succeeding on PRs #25, #26, and #28. The owner authorized correcting this administrative mismatch on 2026-11-14, but the live rule has **not yet been changed or verified**. This documentation PR does not alter the ruleset or bypass its checks.
 
 ## Not in scope
 
