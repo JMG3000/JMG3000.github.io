@@ -62,3 +62,25 @@ The same PR also reported a failing `CircleCI Pipeline` status: “No configurat
 | Additional CI or agent runtime | Not justified |
 
 **Disposition:** The tailored framework remains a documentation proposal. The `main` workflow divergence and live required-check mismatch must be reconciled before CI merge protection is treated as complete. Correction is owner-authorized, but no repository-administration or production-release change has been applied by this documentation PR. CircleCI is an independent, non-required error status.
+
+## 6. Final PR #26 CI and required-check verification — 2026-11-14
+
+**Evidence checked:** [PR #26 Actions run #43676239537](https://github.com/JMG3000/JMG3000.github.io/actions/runs/43676239537), source head `5515ded5775f15a5dabd9aafe0c06faee63944da`, GitHub check-runs/status endpoints, and live [branch ruleset #27215483](https://github.com/JMG3000/JMG3000.github.io/rules/27215483).
+
+| Validation step | Observed result |
+| --- | --- |
+| GitHub Actions: `Validate and build` (GitHub Actions app ID `15368`) | SUCCESS on PR into `dev` |
+| `npm ci`, `npm run lint`, `npm run typecheck` | SUCCESS |
+| `npm test` | SUCCESS — 5 test files, 11 tests |
+| `npm run build` (Next.js static export) | SUCCESS |
+| `npm audit --audit-level=high` | SUCCESS at the configured high-severity threshold; **7 moderate vulnerabilities reported**, not zero vulnerabilities |
+| `Deploy to GitHub Pages` | SKIPPED on PR, correctly; no deployment acceptance implied |
+| SonarCloud code-analysis check | SUCCESS on the checked PR head; not a general guarantee of security |
+| External `CircleCI Pipeline` commit status | ERROR: no CircleCI configuration; not a required GitHub Actions check |
+| Live required-status rule for `dev` and `main` | **BLOCKED:** `REPLACE_WITH_REAL_CI_JOB` is still required, but the observed successful context is `Validate and build` |
+
+**Security configuration:** The `dev` pull-request validation job has `contents: read`; Pages/OIDC write permissions are isolated to the `main`-only deployment job. The `main` workflow remains the old Node 20 build/deploy file with workflow-wide Pages/OIDC permissions, lacking PR triggers and the updated lint/typecheck/test/audit validation. Successful `dev` PR checks do **not** prove that the equivalent `main` PR checks are available or enforced.
+
+**Required before PR #26 merge:** An authorized repository administrator must update the existing ruleset's required context from the placeholder to **`Validate and build`** with GitHub Actions integration ID **`15368`**, preserve both protected branches and the existing deletion/non-fast-forward/PR protections, and independently verify an eligible `pull_request` check on each target (`dev` and `main`). Align the `main` workflow with the validated `dev` workflow through a separately reviewed, non-deploying PR/check path before declaring production parity. Do not disable or bypass protection, merge early, or count the skipped Pages job as validation. This documentation PR does not change repository administration, production workflow, dependency manifests or runtime behavior.
+
+**Decision:** Source-level CI and project tests are intact on the observed PR head; production-branch CI parity and active required-check enforcement remain **NOT VERIFIED / BLOCKED**, and seven moderate dependency advisories remain. No claim of fully secure production deployment or validated merge protection is supported.
