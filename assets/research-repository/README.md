@@ -7,9 +7,9 @@
 
 ## Purpose and source-of-truth
 
-This directory contains the consolidated research and repository-specific governance framework for the GitHub Pages portfolio. It is intentionally maintained in this repository as the portfolio's designated source location.
+This directory contains the six Markdown documents forming this portfolio-specific governance research package. Other related research records may remain in their originating repositories. It is intentionally maintained in this repository as the portfolio's designated source location.
 
-**This is not a temporary transfer staging area.** The research is consolidated here and is not scheduled to move to `JMG3000/research-repository` or another repository. Keep this path stable so the portfolio's GitHub Pages content pipeline can consume the material from its repository-local source. Do not create a second copy elsewhere as a substitute for this source.
+**This is not a temporary transfer staging area.** These six documents are consolidated here and are not scheduled to move to `JMG3000/research-repository` or another repository. Keep this path stable so the portfolio's GitHub Pages content pipeline can consume the material from its repository-local source. Do not create a second copy elsewhere as a substitute for this source.
 
 ## Retention and project lifecycle
 
@@ -17,7 +17,7 @@ This directory contains the consolidated research and repository-specific govern
 - Completion or parking of the related project does not automatically archive, move, or delete this package.
 - If the project is later parked, update the package status and record the date/context here; preserve the research, provenance, and history in place.
 - Do not relocate, rename, transfer, or delete this directory unless the owner explicitly approves that specific change.
-- Until such approval, this directory remains the authoritative repository-local location for this portfolio research.
+- Until such approval, this directory remains the authoritative repository-local source for this six-document portfolio governance package.
 
 ## Package contents
 
