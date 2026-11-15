@@ -11,7 +11,7 @@
 
 This package adapts the useful parts of the TwinAnchor governance reference into a small, repository-specific operating framework for the GitHub Pages portfolio. The objective is controlled, low-friction engineering—not a new agent platform or generalized governance system.
 
-All research for this work is consolidated in this package. It remains in `JMG3000/JMG3000.github.io` as the portfolio's repository-local source. It is not a temporary staging copy and is not scheduled for transfer to `JMG3000/research-repository`.
+The six Markdown documents in this PR form this portfolio-specific package. Related research remains independently in its originating repository, including [draft research PR #73](https://github.com/JMG3000/research-repository/pull/73); that work has not been transferred or consolidated here. This package remains in `JMG3000/JMG3000.github.io` as its own canonical repository-local source. It is not a temporary staging copy and is not scheduled for transfer to `JMG3000/research-repository`.
 
 ## Retention and lifecycle
 
