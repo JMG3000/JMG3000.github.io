@@ -39,16 +39,16 @@ The intended minimum is:
 - Do not add bypass actors by default.
 - Do not create a duplicate ruleset or import a generic ruleset payload over an existing target ruleset.
 
-**Current-state warning:** The live portfolio ruleset currently requires the placeholder context `REPLACE_WITH_REAL_CI_JOB`, not the observed `Validate and build` context. The rule is active. This mismatch must be reviewed and corrected by the owner before the ruleset can be treated as a functioning CI merge gate. This document does not change it.
+**Current-state warning:** The active portfolio ruleset still requires the placeholder `REPLACE_WITH_REAL_CI_JOB` rather than the observed GitHub Actions check `Validate and build`. The owner authorized correcting it on 2026-11-14, but the live ruleset has not been updated or verified. The production `main` workflow also differs from `dev`; confirm both PR paths before enabling the real required check. This document changes neither settings nor CI.
 
 ## 5. CI, release, and least privilege
 
 Reuse `.github/workflows/nextjs.yml`:
 
-- Pull requests to `dev` and `main` run dependency installation, lint, typecheck, tests, static build, and the configured high-severity dependency audit.
-- The build job uses read-only `contents: read` permission.
+- The workflow version on `dev` declares validation for PRs targeting `dev` and `main`: dependency installation, lint, typecheck, tests, static build, and high-severity dependency audit. The current workflow on `main` has not yet been aligned.
+- In the `dev` workflow, the build job uses read-only `contents: read` permission.
 - Pages deployment is limited to non-PR runs on `main`.
-- Pages write and OIDC permissions remain confined to the deployment job.
+- In the `dev` workflow, Pages write and OIDC permissions are confined to the deployment job; the legacy `main` workflow still grants these permissions at workflow scope.
 - Preserve static export; GitHub Pages has no request-time Node.js runtime.
 
 Do not add another CI provider, workflow, required status check, or paid analysis gate without evidence of a specific gap and owner approval. SonarCloud is not a required gate for this plan.
