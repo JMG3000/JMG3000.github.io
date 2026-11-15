@@ -11,7 +11,9 @@
 
 2. **GitHub Actions workflow, `dev`**  
    https://github.com/JMG3000/JMG3000.github.io/blob/7f520e7e1b74812908c5cc6a3a66cdc660f07ef0/.github/workflows/nextjs.yml  
-   Establishes PR triggers for `dev` and `main`, validation steps, job permissions, and main-only Pages deployment.
+   Establishes the **`dev` version** of PR triggers for `dev` and `main`, validation steps, job permissions, and main-only Pages deployment. This alone does not prove that production `main` already has the same workflow.
+
+   **Production `main` comparison (2026-11-14):** https://github.com/JMG3000/JMG3000.github.io/blob/e0c56bd9e9bd27cda873715f79e7b65c4710162f/.github/workflows/nextjs.yml — the still-deployed legacy workflow uses Node.js 20, has no `pull_request` trigger, retains broader workflow-level deployment permissions, and does not run the `dev` workflow's lint, typecheck, tests, or audit steps.
 
 3. **Planning issue #24**  
    https://github.com/JMG3000/JMG3000.github.io/issues/24  
