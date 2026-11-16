@@ -11,7 +11,9 @@
 
 2. **GitHub Actions workflow, `dev`**  
    https://github.com/JMG3000/JMG3000.github.io/blob/7f520e7e1b74812908c5cc6a3a66cdc660f07ef0/.github/workflows/nextjs.yml  
-   Establishes PR triggers for `dev` and `main`, validation steps, job permissions, and main-only Pages deployment.
+   Establishes the **`dev` version** of PR triggers for `dev` and `main`, validation steps, job permissions, and main-only Pages deployment. This alone does not prove that production `main` already has the same workflow.
+
+   **Production `main` comparison (2026-11-14):** https://github.com/JMG3000/JMG3000.github.io/blob/e0c56bd9e9bd27cda873715f79e7b65c4710162f/.github/workflows/nextjs.yml — the still-deployed legacy workflow uses Node.js 20, has no `pull_request` trigger, retains broader workflow-level deployment permissions, and does not run the `dev` workflow's lint, typecheck, tests, or audit steps.
 
 3. **Planning issue #24**  
    https://github.com/JMG3000/JMG3000.github.io/issues/24  
@@ -37,7 +39,7 @@
 
 8. **Research Repository Agent Intake Governance**  
    https://github.com/JMG3000/research-repository/blob/99e5ab1503d53f6833be96599b1d213368c1a498/Governance%20Evidence/AGENT_INTAKE_GOVERNANCE.md  
-   Read for privacy, classification, provenance, and cross-project identity boundaries relevant to the later transfer.
+   Read for privacy, classification, provenance, and cross-project identity boundaries relevant to repository-local governance and ownership boundaries.
 
 9. **Canonical Governance Deliverable Standard**  
    https://github.com/JMG3000/research-repository/blob/99e5ab1503d53f6833be96599b1d213368c1a498/Governance%20Evidence/CANONICAL_DELIVERABLE_STANDARD.md  
@@ -50,6 +52,8 @@
 - CircleCI status failure is a GitHub commit-status observation, not proof of the current state of every CircleCI account or project setting.
 - No formal legal or regulatory compliance assessment was performed.
 - No runtime behavior, telemetry, agent execution, or private user data was collected.
+
+## Next.js static Pages integration evidence
 
 10. **Next.js static Pages integration — Issue #27**  
     https://github.com/JMG3000/JMG3000.github.io/issues/27  

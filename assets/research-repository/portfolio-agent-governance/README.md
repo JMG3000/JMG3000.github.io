@@ -5,13 +5,13 @@
 **Canonical location:** `assets/research-repository/portfolio-agent-governance/`  
 **Baseline reviewed:** `dev` at `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`  
 **Review date:** 2026-11-14  
-**Status:** Research consolidated; static Pages integration validated in PR #28; owner review pending; no production release.
+**Status:** Six-document package consolidated; static Pages integration staged in PR #28, with post-synchronization validation and owner review pending. No production release.
 
 ## Purpose and ownership
 
 This package adapts the useful parts of the TwinAnchor governance reference into a small, repository-specific operating framework for the GitHub Pages portfolio. The objective is controlled, low-friction engineering—not a new agent platform or generalized governance system.
 
-All research for this work is consolidated in this package. It remains in `JMG3000/JMG3000.github.io` as the portfolio's repository-local source. It is not a temporary staging copy and is not scheduled for transfer to `JMG3000/research-repository`.
+The six Markdown documents in this PR form this portfolio-specific package. Related research remains independently in its originating repository, including [draft research PR #73](https://github.com/JMG3000/research-repository/pull/73); that work has not been transferred or consolidated here. This package remains in `JMG3000/JMG3000.github.io` as its own canonical repository-local source. It is not a temporary staging copy and is not scheduled for transfer to `JMG3000/research-repository`.
 
 ## Retention and lifecycle
 
@@ -35,18 +35,18 @@ All research for this work is consolidated in this package. It remains in `JMG30
 - Pull requests target `dev`; `main` remains the production/Pages release branch.
 - Existing GitHub Actions validation is reused.
 - GitHub Pages deployment remains limited to pushes to `main`.
-- The Next.js Research section reads this package from its canonical repository path at build time through an explicit six-file allowlist. PR #28 implements the static routes; validation and owner review remain recorded in that PR.
+- PR #26 records the canonical source-location requirement. Separate [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28) implements build-time static routes for this six-file allowlist without changing the source path; final validation and owner review remain required.
 - Owner authorization remains separate from tool access and CI success.
 
 ## Important live finding
 
-The portfolio repository currently has active ruleset #27215483 targeting `dev` and `main`. Its required status-check context is still the literal placeholder `REPLACE_WITH_REAL_CI_JOB`. A real GitHub Actions check named `Validate and build` was observed succeeding on PR #25. The placeholder mismatch is a configuration issue requiring owner review; this package does not change the ruleset.
+The portfolio repository has active ruleset #27215483 targeting `dev` and `main`. Its required status-check context remains the literal placeholder `REPLACE_WITH_REAL_CI_JOB`. The real GitHub Actions check is `Validate and build` (GitHub Actions integration ID `15368`) and was observed succeeding on PRs #25, #26, and #28. The owner authorized correcting this administrative mismatch on 2026-11-14, but the live rule has **not yet been changed or verified**. This documentation PR does not alter the ruleset or bypass its checks.
 
 ## Not in scope
 
 - Implementing `AGENTS.md` or `.github/AGENTS.md`.
 - Editing the root application README or CI workflow.
-- Expanding the published allowlist or changing the public content set without owner review.
+- Expanding the Pages content allowlist or altering the static build outside separately scoped PR #28.
 - Changing branch protection or required checks.
 - Removing CircleCI or changing GitHub Apps/integrations.
 - Adding a new workflow, agent runtime, framework, permanent branch, board, Jira project, telemetry, or background service.

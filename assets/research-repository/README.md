@@ -7,9 +7,9 @@
 
 ## Purpose and source-of-truth
 
-This directory contains the consolidated research and repository-specific governance framework for the GitHub Pages portfolio. It is intentionally maintained in this repository as the portfolio's designated source location.
+This directory contains the six Markdown documents forming this portfolio-specific governance research package. Other related research records may remain in their originating repositories. It is intentionally maintained in this repository as the portfolio's designated source location.
 
-**This is not a temporary transfer staging area.** The research is consolidated here and is not scheduled to move to `JMG3000/research-repository` or another repository. Keep this path stable so the portfolio's GitHub Pages content pipeline can consume the material from its repository-local source. Do not create a second copy elsewhere as a substitute for this source.
+**This is not a temporary transfer staging area.** These six documents are consolidated here and are not scheduled to move to `JMG3000/research-repository` or another repository. Keep this path stable so the portfolio's GitHub Pages content pipeline can consume the material from its repository-local source. Do not create a second copy elsewhere as a substitute for this source.
 
 ## Retention and project lifecycle
 
@@ -17,7 +17,7 @@ This directory contains the consolidated research and repository-specific govern
 - Completion or parking of the related project does not automatically archive, move, or delete this package.
 - If the project is later parked, update the package status and record the date/context here; preserve the research, provenance, and history in place.
 - Do not relocate, rename, transfer, or delete this directory unless the owner explicitly approves that specific change.
-- Until such approval, this directory remains the authoritative repository-local location for this portfolio research.
+- Until such approval, this directory remains the authoritative repository-local source for this six-document portfolio governance package.
 
 ## Package contents
 
@@ -31,7 +31,7 @@ This directory contains the consolidated research and repository-specific govern
 
 The intended content integration is for the portfolio's GitHub Pages build to read from this repository-local package path. The path is therefore part of the documented source contract and should remain stable.
 
-The Next.js Research section reads the Markdown files directly from this repository-local directory during `next build`. The static routes are implemented in [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28). The build uses a fixed allowlist of the six reviewed Markdown files; it does not recursively publish arbitrary files. This directory remains the sole content source; no copy is made into `content/posts/` or another content tree.
+PR #26 documents the source-location contract only. Separate [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28) implements the Next.js Research section, reading the six allowlisted Markdown files directly during `next build` without copying them to `content/posts/` or another content tree. The implementation remains subject to its own validation and owner review; production publication has not occurred.
 
 ## Scope and boundaries
 
