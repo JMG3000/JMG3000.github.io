@@ -5,7 +5,7 @@
 **Canonical location:** `assets/research-repository/portfolio-agent-governance/`  
 **Baseline reviewed:** `dev` at `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`  
 **Review date:** 2026-11-14  
-**Status:** Six-document package consolidated; static Pages integration staged in PR #28, with post-synchronization validation and owner review pending. No production release.
+**Status:** Six-document package consolidated through merged PR #26; static Pages integration and its verification are tracked by PR #28. No production release.
 
 ## Purpose and ownership
 
@@ -35,7 +35,7 @@ The six Markdown documents in this PR form this portfolio-specific package. Rela
 - Pull requests target `dev`; `main` remains the production/Pages release branch.
 - Existing GitHub Actions validation is reused.
 - GitHub Pages deployment remains limited to pushes to `main`.
-- PR #26 records the canonical source-location requirement. Separate [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28) implements build-time static routes for this six-file allowlist without changing the source path; final validation and owner review remain required.
+- Merged PR #26 records the canonical source-location requirement. Separate [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28) implements build-time static routes for this six-file allowlist without changing the source path; merge review and validation are tracked in that PR, and publishing to `main` requires distinct approval.
 - Owner authorization remains separate from tool access and CI success.
 
 ## Important live finding

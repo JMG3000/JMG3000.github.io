@@ -3,7 +3,7 @@
 **Repository:** [JMG3000/JMG3000.github.io](https://github.com/JMG3000/JMG3000.github.io)  
 **Canonical repository path:** `assets/research-repository/`  
 **Package:** [Portfolio Agent Governance](portfolio-agent-governance/README.md)  
-**Status:** Consolidated research; owner review and any future implementation remain separately authorized.
+**Status:** Research source package consolidated in PR #26; build-time static Research integration tracked by PR #28. Production release to `main` remains separately authorized.
 
 ## Purpose and source-of-truth
 
@@ -31,7 +31,7 @@ This directory contains the six Markdown documents forming this portfolio-specif
 
 The intended content integration is for the portfolio's GitHub Pages build to read from this repository-local package path. The path is therefore part of the documented source contract and should remain stable.
 
-PR #26 documents the source-location contract only. Separate [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28) implements the Next.js Research section, reading the six allowlisted Markdown files directly during `next build` without copying them to `content/posts/` or another content tree. The implementation remains subject to its own validation and owner review; production publication has not occurred.
+PR #26 documents the source-location contract only. Separate [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28) implements the Next.js Research section, reading the six allowlisted Markdown files directly during `next build` without copying them to `content/posts/` or another content tree. PR #28 owns the implementation and validation evidence; production publication remains a separately approved action.
 
 ## Scope and boundaries
 

@@ -78,7 +78,7 @@ Implementation is tracked in [Issue #27](https://github.com/JMG3000/JMG3000.gith
 
 The build log confirms the Research index and five static detail routes were generated. The post-build verifier checks all six expected HTML outputs and rejects unexpected HTML pages under the Research output directory. The workflow did not upload a Pages artifact or deploy the site because this is a pull request.
 
-**Disposition:** Static generation and the post-build allowlist check passed on the pre-synchronization PR #28 commit. The synchronized head requires a fresh full validation. No production publication has occurred.
+**Implementation validation chronology:** Static generation and the allowlist check passed on the initial PR #28 head (run #43597641137) and its 2026-11-16 synchronized head ([run #43848158936](https://github.com/JMG3000/JMG3000.github.io/actions/runs/43848158936)). PR #28 was synchronized again after PR #26 merged to `dev` on 2026-11-17; final merge readiness is established by the latest required check and the PR review record, not by these historical runs. No production publication has occurred.
 
 ## 6. Replay conclusion
 
