@@ -40,7 +40,9 @@ The six Markdown documents in this PR form this portfolio-specific package. Rela
 
 ## Important live finding
 
-The portfolio repository has active ruleset #27215483 targeting `dev` and `main`. Its required status-check context remains the literal placeholder `REPLACE_WITH_REAL_CI_JOB`. The real GitHub Actions check is `Validate and build` (GitHub Actions integration ID `15368`) and was observed succeeding on PRs #25, #26, and #28. The owner authorized correcting this administrative mismatch on 2026-11-14, but the live rule has **not yet been changed or verified**. This documentation PR does not alter the ruleset or bypass its checks.
+**Historical observation (2026-11-14):** Ruleset #27215483 targeted `dev` and `main` but required the placeholder `REPLACE_WITH_REAL_CI_JOB`, rather than the observed GitHub Actions check `Validate and build` (integration ID `15368`).
+
+**Verified correction (2026-11-16):** The active ruleset now requires `Validate and build` from GitHub Actions on both protected branches. After the correction, passing validation was confirmed on PR #30 (`dev`) and test PR #33 (`main`); an intentionally failing required check blocked test PR #32 (`dev`), and an absent required check blocked test PR #31 (`main`). Temporary test PRs #31–33 were closed unmerged. The production `main` source and Node 20 workflow remain separate from the validated `dev` baseline; no deployment occurred. [CI evidence and limitations](https://github.com/JMG3000/JMG3000.github.io/issues/29). This documentation PR did not change the ruleset or CI.
 
 ## Not in scope
 

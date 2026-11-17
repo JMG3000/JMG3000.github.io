@@ -24,7 +24,7 @@ The reviewed integration workflow is [`.github/workflows/nextjs.yml` on `dev`](h
 | Scenario | Workflow behavior | Result |
 | --- | --- | --- |
 | Pull request to `dev` | Runs `Validate and build` | Confirmed in workflow |
-| Pull request to `main` | `dev` version declares `Validate and build`; current `main` workflow does not declare a PR trigger | Not verified for the production baseline |
+| Pull request to `main` | `dev` version declares `Validate and build`; production `main` workflow still lacks an equivalent PR trigger | Historical baseline not verified on 2026-11-14; compatible `dev` head passed in main-targeted PR #33 on 2026-11-16 |
 | Pull request | Pages deploy job skipped | Confirmed in workflow and PR #25 |
 | Push to `main` | `dev` version runs full validation and Pages deployment; current `main` version uses its older build/deploy job | Future behavior only until `dev` workflow is promoted |
 | Push to `dev` | No push trigger is defined | Confirmed in workflow |
@@ -37,7 +37,9 @@ PR #25's `Validate and build` check completed successfully. Its `Deploy to GitHu
 
 The GitHub ruleset API returned active ruleset #27215483 targeting `dev` and `main`. It includes deletion, non-fast-forward, pull-request, and required-status-check rules, with zero required approvals and no bypass actors.
 
-**Failing condition:** its required status context is the literal `REPLACE_WITH_REAL_CI_JOB`. The observed real GitHub Actions check is `Validate and build`. The ruleset therefore has not been verified as a functioning CI merge gate. Before requiring `Validate and build` on both branches, verify that the check is reported for the intended `main` PR flow as well as `dev`; otherwise the required check can block merges. The owner authorized correction on 2026-11-14, but a live repository-admin update and end-to-end enforcement test are still pending.
+**Historical failing condition (observed 2026-11-14):** the ruleset required `REPLACE_WITH_REAL_CI_JOB` rather than the existing `Validate and build` job. This was a valid finding at the date of the original read-only replay.
+
+**Post-replay verification (2026-11-16):** the owner replaced the placeholder with GitHub Actions `Validate and build` (integration ID `15368`) while preserving `dev`/`main` targets, PR rules and no-bypass policy. Passing `dev` validation was confirmed through PR #30 rerun; deliberately failing validation blocked PR #32. A `main`-targeted PR #31 with no required check was blocked, while PR #33 carrying the compatible `dev` baseline passed. Test PRs #31–33 were closed unmerged, and Pages deployment was skipped. [Evidence: Issue #29](https://github.com/JMG3000/JMG3000.github.io/issues/29). This establishes required-check behavior **for the tested PR scenarios**, not production workflow parity or a release to `main`.
 
 The same PR also reported a failing `CircleCI Pipeline` status: “No configuration was found in your project.” This is separate from the GitHub Actions workflow and is not the check named by the current ruleset.
 
@@ -87,8 +89,8 @@ The build log confirms the Research index and five static detail routes were gen
 | Main-only Pages deployment | Already configured |
 | Least-privilege workflow permissions | Verified in `dev`; the current `main` workflow still grants broader top-level deployment permissions |
 | Root/scoped agent instructions | Not present; remain a separate, owner-approved implementation item |
-| Active TwinAnchor ruleset | Present, but required check is a placeholder |
+| Active TwinAnchor ruleset | Placeholder found 2026-11-14; corrected and positive/negative enforcement tested 2026-11-16 |
 | CircleCI status | Error due to missing CircleCI configuration; separate from GitHub Actions |
 | Additional CI or agent runtime | Not justified |
 
-**Disposition:** The tailored framework remains a documentation proposal. The `main` workflow divergence and live required-check mismatch must be reconciled before CI merge protection is treated as complete. Correction is owner-authorized, but no repository-administration or production-release change has been applied by this documentation PR. CircleCI is an independent, non-required error status.
+**Disposition (updated 2026-11-16):** The tailored framework remains a documentation proposal. The required-check mismatch was corrected by the owner outside this PR and both target-branch enforcement scenarios were validated. The production `main` workflow remains divergent; production alignment and deployment require a separately approved, compatible release. This documentation PR made no repository-administration or release changes. CircleCI remains an independent, non-required error status.

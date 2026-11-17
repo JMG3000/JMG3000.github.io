@@ -25,7 +25,7 @@
 
 5. **Portfolio live ruleset #27215483**  
    https://github.com/JMG3000/JMG3000.github.io/rules/27215483  
-   Read through the GitHub ruleset API on 2026-11-14. It is active on `dev` and `main`; the required status check remains `REPLACE_WITH_REAL_CI_JOB`.
+   Historical API read (2026-11-14): active on `dev` and `main`, requiring the then-invalid `REPLACE_WITH_REAL_CI_JOB`. **Follow-up verification (2026-11-16):** current required check is GitHub Actions `Validate and build` (integration ID `15368`); its passing, failing and missing-status behaviors were tested on both protected-branch targets. See [Issue #29](https://github.com/JMG3000/JMG3000.github.io/issues/29) and closed test PRs [#31](https://github.com/JMG3000/JMG3000.github.io/pull/31), [#32](https://github.com/JMG3000/JMG3000.github.io/pull/32), [#33](https://github.com/JMG3000/JMG3000.github.io/pull/33). The `main` production workflow still differs from `dev`.
 
 6. **PR #25 check runs**  
    https://github.com/JMG3000/JMG3000.github.io/pull/25/checks  
@@ -48,7 +48,7 @@
 ## Evidence limits
 
 - GitHub's branch-protection endpoint returned HTTP 403 for direct branch-protection reads; the repository rulesets endpoint was readable and supplied ruleset #27215483.
-- The exact live status-check mismatch is based on the ruleset response and the successful `Validate and build` check on PR #25.
+- The status-check mismatch was supported by the 2026-11-14 ruleset response and PR #25 check; **it is a historical observation, not the current live ruleset state**. The post-change enforcement testing and limits are documented in Issue #29.
 - CircleCI status failure is a GitHub commit-status observation, not proof of the current state of every CircleCI account or project setting.
 - No formal legal or regulatory compliance assessment was performed.
 - No runtime behavior, telemetry, agent execution, or private user data was collected.
