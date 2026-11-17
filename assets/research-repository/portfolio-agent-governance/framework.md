@@ -39,7 +39,7 @@ The intended minimum is:
 - Do not add bypass actors by default.
 - Do not create a duplicate ruleset or import a generic ruleset payload over an existing target ruleset.
 
-**Current-state warning:** The active portfolio ruleset still requires the placeholder `REPLACE_WITH_REAL_CI_JOB` rather than the observed GitHub Actions check `Validate and build`. The owner authorized correcting it on 2026-11-14, but the live ruleset has not been updated or verified. The production `main` workflow also differs from `dev`; confirm both PR paths before enabling the real required check. This document changes neither settings nor CI.
+**Ruleset update (verified 2026-11-16):** The 2026-11-14 review identified the placeholder `REPLACE_WITH_REAL_CI_JOB` as an active defect. The owner corrected ruleset #27215483 to require GitHub Actions `Validate and build` (integration ID `15368`) on `dev` and `main`. Positive and negative required-check enforcement scenarios were tested on both branches ([Issue #29](https://github.com/JMG3000/JMG3000.github.io/issues/29)); temporary test PRs were closed without merge. **Remaining release boundary:** production `main` retains the legacy Node 20 application/workflow baseline and is not aligned with `dev`; promote a compatible complete release only after separate authorization. This document changes neither settings nor CI.
 
 ## 5. CI, release, and least privilege
 
