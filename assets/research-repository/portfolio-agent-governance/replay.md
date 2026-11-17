@@ -4,7 +4,7 @@
 **Target:** `JMG3000/JMG3000.github.io`  
 **Baseline:** `dev` commit `7f520e7e1b74812908c5cc6a3a66cdc660f07ef0`
 
-This replay checks the proposed framework against the repository's observed configuration. It is not an implementation test and made no settings or application changes.
+This replay records the repository baseline and governance limitations. The static Research implementation in PR #28 is documented separately below; no production deployment or ruleset change is included.
 
 ## 1. Repository baseline
 
@@ -50,7 +50,37 @@ The same PR also reported a failing `CircleCI Pipeline` status: “No configurat
 - The root README describes the existing application, local checks, and delivery controls.
 - The current workflow already provides the validation and deployment structure; no additional workflow is justified by this replay.
 
-## 5. Replay conclusion
+## 5. Static Pages source integration
+
+Implementation is tracked in [Issue #27](https://github.com/JMG3000/JMG3000.github.io/issues/27) and [PR #28](https://github.com/JMG3000/JMG3000.github.io/pull/28).
+
+- Canonical source: `assets/research-repository/` in this repository.
+- The root `README.md` is rendered as the Research index at `/research`.
+- Five allowlisted documents are rendered as static detail routes under `/research/{slug}`.
+- The manifest explicitly names the five detail files; together with the root README, exactly six Markdown files are exposed.
+- `getStaticProps` and `getStaticPaths` read and generate content at build time; there is no request-time filesystem access, API route, remote fetch, CMS, or runtime Node server.
+- Markdown raw HTML is escaped; links are limited to safe external protocols, same-package allowlisted Markdown links, or local anchors.
+- Unknown slugs and traversal-shaped slugs are rejected.
+- No Markdown files are copied to `content/posts/` or another content directory.
+
+**Pre-synchronization validation evidence:** GitHub Actions run [#43597641137](https://github.com/JMG3000/JMG3000.github.io/actions/runs/43597641137) completed successfully for commit `81d13636fbed6ce75fbb908042991cb52dcda187`.
+
+| Check | Result |
+| --- | --- |
+| `npm ci` | PASS |
+| `npm run lint` | PASS |
+| `npm run typecheck` | PASS |
+| `npm test` | PASS — 20 tests across 6 files |
+| `npm run build` | PASS — Next.js static export |
+| Post-build output verification | PASS — 6 allowlisted Research HTML pages found in `out/` |
+| `npm audit --audit-level=high` | PASS — 7 moderate advisories remain; no high-severity finding blocked this gate |
+| Pages deployment | SKIPPED as expected for a pull request |
+
+The build log confirms the Research index and five static detail routes were generated. The post-build verifier checks all six expected HTML outputs and rejects unexpected HTML pages under the Research output directory. The workflow did not upload a Pages artifact or deploy the site because this is a pull request.
+
+**Implementation validation chronology:** Static generation and the allowlist check passed on the initial PR #28 head (run #43597641137) and its 2026-11-16 synchronized head ([run #43848158936](https://github.com/JMG3000/JMG3000.github.io/actions/runs/43848158936)). PR #28 was synchronized again after PR #26 merged to `dev` on 2026-11-17; final merge readiness is established by the latest required check and the PR review record, not by these historical runs. No production publication has occurred.
+
+## 6. Replay conclusion
 
 | Area | Finding |
 | --- | --- |

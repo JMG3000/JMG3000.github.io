@@ -39,7 +39,7 @@
 
 8. **Research Repository Agent Intake Governance**  
    https://github.com/JMG3000/research-repository/blob/99e5ab1503d53f6833be96599b1d213368c1a498/Governance%20Evidence/AGENT_INTAKE_GOVERNANCE.md  
-   Read for privacy, classification, provenance, and cross-project identity boundaries relevant to the later transfer.
+   Read for privacy, classification, provenance, and cross-project identity boundaries relevant to repository-local governance and ownership boundaries.
 
 9. **Canonical Governance Deliverable Standard**  
    https://github.com/JMG3000/research-repository/blob/99e5ab1503d53f6833be96599b1d213368c1a498/Governance%20Evidence/CANONICAL_DELIVERABLE_STANDARD.md  
@@ -52,3 +52,33 @@
 - CircleCI status failure is a GitHub commit-status observation, not proof of the current state of every CircleCI account or project setting.
 - No formal legal or regulatory compliance assessment was performed.
 - No runtime behavior, telemetry, agent execution, or private user data was collected.
+
+## Next.js static Pages integration evidence
+
+10. **Next.js static Pages integration — Issue #27**  
+    https://github.com/JMG3000/JMG3000.github.io/issues/27  
+    Defines the explicit six-file Markdown allowlist, static generation requirements, security boundaries, and acceptance tests.
+
+11. **Next.js static export documentation**  
+    https://nextjs.org/docs/app/guides/static-exports  
+    Confirms that Next.js static export generates route HTML during `next build` and does not provide request-time Node.js features.
+
+12. **GitHub Pages deployment documentation**  
+    https://docs.github.com/en/get-started/start-your-journey/deploying-your-website-automatically  
+    Documents GitHub Actions as the build/deploy path for GitHub Pages.
+
+13. **GitHub ruleset approval documentation**  
+    https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets  
+    Used to assess pull-request approval controls and their implications for the current single-owner workflow.
+
+14. **GitHub CODEOWNERS documentation**  
+    https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners  
+    Documents the conditions for code-owner review, including write access and the need for a distinct reviewer from the PR author.
+
+15. **Static Research Pages implementation — PR #28**  
+    https://github.com/JMG3000/JMG3000.github.io/pull/28  
+    Implements the allowlisted build-time Markdown source integration and static Research routes; validation is recorded separately from the PR's review/merge state.
+
+16. **GitHub Actions validation run #43597641137**  
+    https://github.com/JMG3000/JMG3000.github.io/actions/runs/43597641137  
+    Successful Node 24 validation for commit `81d13636fbed6ce75fbb908042991cb52dcda187`: install, lint, typecheck, 20 tests, static build, six-page post-build allowlist verification, and high-severity audit threshold. Seven moderate dependency advisories remain; Pages deployment was skipped for the PR.

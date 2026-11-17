@@ -16,3 +16,40 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+
+/* Static research documents */
+.research-content {
+  color: var(--chakra-colors-fg);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.research-content h1,
+.research-content h2,
+.research-content h3,
+.research-content h4 {
+  color: var(--chakra-colors-fg);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.75rem 0 0.75rem;
+}
+
+.research-content h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin-top: 0; }
+.research-content h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.research-content h3 { font-size: 1.25rem; }
+.research-content p { margin: 0.75rem 0; }
+.research-content ul,
+.research-content ol { margin: 0.75rem 0 1rem 1.5rem; }
+.research-content li { margin: 0.35rem 0; padding-left: 0.25rem; }
+.research-content a { color: var(--chakra-colors-blue-600); text-decoration: underline; text-underline-offset: 0.15em; }
+.research-content code { background: var(--chakra-colors-bg-muted); border-radius: 0.25rem; padding: 0.1rem 0.3rem; font-size: 0.9em; }
+.research-content pre { background: var(--chakra-colors-bg-muted); border: 1px solid var(--chakra-colors-border); border-radius: 0.75rem; margin: 1rem 0; overflow-x: auto; padding: 1rem; }
+.research-content pre code { background: transparent; padding: 0; }
+.research-content blockquote { border-left: 3px solid var(--chakra-colors-border); margin: 1rem 0; padding-left: 1rem; }
+.research-content hr { border-color: var(--chakra-colors-border); margin: 1.5rem 0; }
+.research-table-wrap { margin: 1rem 0; overflow-x: auto; width: 100%; }
+.research-content table { border-collapse: collapse; min-width: 36rem; width: 100%; }
+.research-content th,
+.research-content td { border: 1px solid var(--chakra-colors-border); padding: 0.65rem 0.75rem; text-align: left; vertical-align: top; }
+.research-content th { background: var(--chakra-colors-bg-muted); font-weight: 700; }
