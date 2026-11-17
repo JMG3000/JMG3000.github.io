@@ -29,13 +29,13 @@ The portable TwinAnchor v004 payload is disabled by default and contains a place
 - A ruleset can be active while misconfigured; the target check context must be verified against actual check runs.
 - The research repository's `PLT-GOV-*` identity scheme is not a namespace for unrelated portfolio-specific policies.
 
-## 4. Portfolio-specific live configuration observed
+## 4. Portfolio-specific configuration (original observation 2026-11-14; correction verified 2026-11-16)
 
 The portfolio repository exposes active ruleset [#27215483](https://github.com/JMG3000/JMG3000.github.io/rules/27215483), named `PLT-GOV-001 — TwinAnchor (Configure Before Activation)`.
 
 Observed configuration:
 
-| Property | Observed value |
+| Property | Observed 2026-11-14 value |
 | --- | --- |
 | Enforcement | Active |
 | Branch targets | `dev`, `main` |
@@ -46,7 +46,9 @@ Observed configuration:
 | Required check context | `REPLACE_WITH_REAL_CI_JOB` |
 | Integration ID | 15368 (GitHub Actions) |
 
-The name says “Configure Before Activation,” but enforcement is active. The required check is still a placeholder. The actual GitHub Actions job observed on PR #25 is `Validate and build` and completed successfully. Therefore the placeholder does not match the observed CI job.
+At the 2026-11-14 review, the ruleset name said “Configure Before Activation” despite active enforcement, and the required check was still the placeholder shown above; PR #25's real `Validate and build` job had passed.
+
+**Correction verified 2026-11-16:** ruleset #27215483 now requires GitHub Actions `Validate and build` (integration ID `15368`), not the placeholder. The owner confirmed the live rule and positive/negative enforcement for `dev` and `main` via PR #30 rerun and temporary test PRs #31–33 (all closed unmerged). [Evidence](https://github.com/JMG3000/JMG3000.github.io/issues/29). The production `main` workflow remains the legacy Node 20 baseline; these tests did not deploy or promote source code.
 
 A separate `CircleCI Pipeline` commit status was observed as an error stating that no CircleCI configuration was found. The portfolio's tracked workflow is GitHub Actions; CircleCI is not the validation workflow described by the README. This package does not remove or modify the CircleCI integration.
 
