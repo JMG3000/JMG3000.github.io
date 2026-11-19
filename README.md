@@ -80,16 +80,13 @@ npm run build
 - `prior_site_architecture/`: preserved Ruby/Jekyll site structure, configuration, content, and assets.
 - `content/posts/`: original Jekyll post retained for content compatibility.
 - Git history and tag `v1.0.0`: complete evolution from the initial GitHub Pages/Jekyll site through Next.js.
-- `docs/jira-tracker.md`: historical issue-tracking record.
+
+## Project tracking
+
+- [Current issue and delivery tracker](docs/jira-tracker.md): dated GitHub issue/PR snapshot and historical Jira crosswalk.
+- [Website follow-up backlog](docs/website-follow-up-backlog.md): deferred UX/UI requirements, future enhancements, and maintenance.
 
 ## Modernization records
 
 - [Architecture decision and stabilization scope](docs/superpowers/specs/2026-07-23-portfolio-modernization-design.md)
 - [Executable stabilization plan](docs/superpowers/plans/2026-07-23-portfolio-stabilization.md)
-
-## Deferred roadmap
-
-- Incremental App Router migration after the stabilized baseline is deployed.
-- Expanded project case studies with measurable outcomes and supporting media.
-- Full visual-design pass, accessibility review, and performance budgets.
-- Optional custom domain, analytics, monitoring, and server-backed contact workflow.
